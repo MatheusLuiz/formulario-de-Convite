@@ -1,18 +1,18 @@
 .tema-event {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    grid-template-rows: 200px 200px 200px 200px;
 }
 
 .tema-event > div{
-    width: 134px;
-    height: 103px;
+    width: auto;
+    height: auto;
     border: 2px solid var(--input-stroke);
     border-radius: 5px;
     padding: 4px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
 }
 
-.tema-event > div > img {
-    height: 64px;
-    width: auto;
-}
