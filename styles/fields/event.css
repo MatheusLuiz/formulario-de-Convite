@@ -1,21 +1,58 @@
-.input-wrapper, .date-wrapper, .text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    & label {
-        margin-top: 10px;
-    }
-
-    & input {
-        width: auto;
-        height: 2.5rem;
-        border-radius: 5px;
-        border: 1px solid var(--input-stroke);
-        background-color: var(--input-base);
-    }
+.input-wrapper {
+  display: flex;
+  flex-direction: column ;
+  gap: 10px;
 }
 
-.date {
-    width: auto;
+.date-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: auto;
+  gap: 8px;
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 8px;
+  flex: 1;
+}
+
+.input-wrapper input,
+.date-wrapper input {
+  width: auto;
+  height: 48px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: var(--input-base);
+  border: 2px solid var(--input-stroke);
+  margin-bottom: 20px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.text-wrapper > textarea {
+  background-color: var(--input-base);
+  border-radius: 5px;
+  border: 2px solid var(--input-stroke);
+
+}
+
+section > header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+fieldset > div {
+  border: 1px solid var(--input-stroke);
+  display: flex;
+  gap: 10px;
 }

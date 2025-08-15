@@ -1,100 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulário de Convite</title>
-  <link rel="stylesheet" href="/styles/index.css" />
-</head>
-<body>
-  <div id="app">
-    <aside>
-      <header>
-        <img src="./assets/Logo.svg" alt="Logo Festiwite" />
-        <div class="text">
-          <h1>Festiwite</h1>
-          <p>Crie um convite digital para o seu evento</p>
-        </div>
-      </header>
-    </aside>
-
-    <main>
-      <h2>Crie o seu convite</h2>
-
-      <!-- Formulário único -->
-      <form>
-        
-        <!-- Seção: Sobre o evento -->
-        <section class="event">
-          <header>
-            <img src="./assets/Icons/calendar.svg" alt="Calendário" />
-            <h3>Sobre o evento</h3>
-          </header>
-
-          <div class="input-wrapper">
-            <label for="title">Título</label>
-            <input type="text" id="title" name="title" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Convite</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside>
+        <header>
+          <img src="./assets/Logo.svg" alt="Logo Festiwite" />
+          <div class="text">
+            <h1>Festiwite</h1>
+            <p>Crie um convite digital para o seu evento</p>
           </div>
+        </header>
+      </aside>
 
-          <div class="date">
-            <div class="date-wrapper">
-              <label for="date-time-start">Início</label>
-              <input type="datetime-local" id="date-time-start" name="date-time-start" />
+      <main>
+        <h2>Crie o seu convite</h2>
+
+        <form>
+          <section class="event">
+            <header>
+              <img src="./assets/Icons/calendar.svg" alt="Calendário" />
+              <h3>Sobre o evento</h3>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="title">Título</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Nome do evento"
+              />
             </div>
-            <div class="date-wrapper">
-              <label for="date-time-end">Fim</label>
-              <input type="datetime-local" id="date-time-end" name="date-time-end" />
+
+            <div class="row dates">
+              <div class="date-wrapper">
+                <label for="date-time-start">Início</label>
+                <input
+                  type="datetime-local"
+                  id="date-time-start"
+                  name="date-time-start"
+                />
+              </div>
+              <div class="date-wrapper">
+                <label for="date-time-end">Fim</label>
+                <input
+                  type="datetime-local"
+                  id="date-time-end"
+                  name="date-time-end"
+                />
+              </div>
             </div>
-          </div>
 
-          <fieldset class="radio-wrapper">
-            <legend>Tipo</legend>
-            <div>
-              <input type="radio" name="type-event" id="type-event-presencial" value="presencial" />
-              <label for="type-event-presencial">Presencial</label>
+            <div class="row type-location">
+              <fieldset class="radio-wrapper">
+                <legend>Tipo</legend>
+                <div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="type-event"
+                      id="type-event-presencial"
+                      value="presencial"
+                    />
+                    <label for="type-event-presencial">Presencial</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="type-event"
+                      id="type-event-online"
+                      value="online"
+                    />
+                    <label for="type-event-online">Online</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="input-wrapper">
+                <label for="location">Local</label>
+                <input type="text" id="location" name="location" />
+              </div>
             </div>
-            <div>
-              <input type="radio" name="type-event" id="type-event-online" value="online" />
-              <label for="type-event-online">Online</label>
+
+            <div class="text-wrapper">
+              <label for="description">Descrição</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="10"
+                placeholder="Escreva sobre os detalhes do evento"
+              ></textarea>
             </div>
-          </fieldset>
+          </section>
 
-          <div class="input-wrapper">
-            <label for="location">Local</label>
-            <input type="text" id="location" name="location" />
-          </div>
+          <section class="personalization">
+            <header>
+              <img src="./assets/Icons/paintbrush-vertical.svg" alt="Pincel" />
+              <h3>Personalização</h3>
+            </header>
+          </section>
 
-          <div class="text-wrapper">
-            <label for="description">Descrição</label>
-            <textarea id="description" name="description" rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
-          </div>
-        </section>
+          <section class="contact-details">
+            <header>
+              <img src="./assets/Icons/contact.svg" alt="Contato" />
+              <h3>Dados para Contato</h3>
+            </header>
+          </section>
 
-        <!-- Seção: Personalização -->
-        <section class="personalization">
-          <header>
-            <img src="./assets/Icons/paintbrush-vertical.svg" alt="Pincel" />
-            <h3>Personalização</h3>
-          </header>
-          <!-- inputs de personalização -->
-        </section>
-
-        <!-- Seção: Dados para contato -->
-        <section class="contact-details">
-          <header>
-            <img src="./assets/Icons/contact.svg" alt="Contato" />
-            <h3>Dados para Contato</h3>
-          </header>
-          <!-- inputs de contato -->
-        </section>
-
-        <!-- Rodapé do formulário -->
-        <footer>
-          <button type="submit">Enviar convite</button>
-        </footer>
-
-      </form>
-    </main>
-  </div>
-</body>
+          <footer>
+            <button type="submit">Enviar convite</button>
+          </footer>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>
