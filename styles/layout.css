@@ -1,11 +1,9 @@
 #app {
   display: grid;
   grid-template-columns: 25rem auto;
-
   height: 100vh;
   overflow: hidden;
   gap: 20px;
-
   background-color: var(--shape-background);
 }
 
@@ -14,42 +12,40 @@ aside {
   background-size: cover;
   background-position: center;
   padding: 4rem;
+}
 
-  & header > img {
-    width: 48.5px;
-    height: 48px;
-    margin-bottom: 5px;
-  }
+aside header > img {
+  width: 48.5px;
+  height: 48px;
+  margin-bottom: 5px;
+}
 
-  & header > .text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+aside header .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    & h1 {
-      color: var(--color-pink);
-      font: var(--logo);
-    }
+aside header .text h1 {
+  color: var(--color-pink);
+  font: var(--logo);
+}
 
-    & p {
-      color: var(--text-heading);
-      font: var(--body-sm);
-    }
-  }
+aside header .text p {
+  color: var(--text-heading);
+  font: var(--body-sm);
 }
 
 main {
   background-color: var(--shape-body);
   padding: 5rem 7.81rem;
-
   overflow: auto;
-
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
 
-  & section > div {
-    display: flex;
-    gap: 10px;
-  }
+main section > div {
+  display: flex;
+  gap: 10px;
 }
