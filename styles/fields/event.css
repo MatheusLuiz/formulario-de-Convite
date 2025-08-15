@@ -1,0 +1,21 @@
+.input-wrapper, .date-wrapper, .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & label {
+        margin-top: 10px;
+    }
+
+    & input {
+        width: auto;
+        height: 2.5rem;
+        border-radius: 5px;
+        border: 1px solid var(--input-stroke);
+        background-color: var(--input-base);
+    }
+}
+
+.date {
+    width: auto;
+}

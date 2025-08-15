@@ -1,20 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário de Convite</title>
     <link rel="stylesheet" href="/styles/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
-      <aside class="brand">
+      <aside>
         <header>
+          <img src="./assets/Logo.svg" alt="logo" />
+          <div class="text">
             <h1>Festiwite</h1>
             <p>Crie um convite digital para o seu evento</p>
+          </div>
         </header>
       </aside>
-      <main>main</main>
+
+      <main>
+        <h2>Crie o seu convite</h2>
+        <form>
+          <section class="Event">
+            <div>
+              <img src="./assets/Icons/calendar.svg" alt="" />
+              <h3>Sobre o evento</h3>
+            </div>
+            <form>
+              <div class="input-wrapper">
+                <label for="title">Título</label>
+                <input type="text" id="title" />
+              </div>
+
+              <div class="date">
+                <div class="date-wrapper">
+                  <label for="date-time-start">Início</label>
+                  <input
+                    type="datetime"
+                    name="date-time-start"
+                    id="date-time-start"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+                <div class="date-wrapper">
+                  <label for="date-time-end">Fim</label>
+                  <input
+                    type="datetime"
+                    name="date-time-end"
+                    id="date-time-end"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+              </div>
+
+              <div class="radio-wrapper">
+                <label for="type-event">Tipo</label>
+                <div >
+                  <input
+                    type="radio"
+                    name="type-event"
+                    id="type-event"
+                  />
+                  
+                  <p>Presencial</p>
+      
+                </div>
+                <div>
+                    <input
+                    type="radio"
+                    name="type-event"
+                    id="type-event"
+                  />
+                  
+                  <p>Online</p>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="location">Local</label>
+                <input type="text" id="location" />
+              </div>
+              <div class="text-wrapper">
+                <label for="description">Descrição</label>
+                <textarea
+                  rows="8"
+                  name="description"
+                  id="description"
+                  placeholder="Escreva sobre os detalhes do evento"
+                ></textarea>
+              </div>
+            </form>
+          </section>
+          <section class="Personalization">
+            <div>
+              <img src="./assets/Icons/paintbrush-vertical.svg" alt="Pincel" />
+              <h3>Personalização</h3>
+            </div>
+            <form></form>
+          </section>
+          <section class="contact-details">
+            <div>
+              <img src="./assets/Icons/contact.svg" alt="Contato" />
+              <h3>Dados para Contato</h3>
+            </div>
+            <form></form>
+          </section>
+
+          <footer></footer>
+        </form>
+      </main>
     </div>
   </body>
 </html>
